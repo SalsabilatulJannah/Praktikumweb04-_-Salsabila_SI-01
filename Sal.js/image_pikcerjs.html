@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html>
+    <head>	
+        <title>IMAGE PICKER</title></head>
+        <body style="text-align: center;">
+            <select onchange="gantigambar();" id="listgambar">
+                <option value="pilih">-- Pilih Karakter Kartun --</option>    				
+                <option value="https://w7.pngwing.com/pngs/892/521/png-transparent-mickey-mouse-cartoon-mickey-heroes-hand-mouse.png">mickeymose</option>			
+                <option value="https://w7.pngwing.com/pngs/625/775/png-transparent-minnie-mouse-mickey-mouse-daisy-duck-intensamente-balloon-cartoon-mickey-mouse.png">minnie mouse</option>			
+                <option value="https://w7.pngwing.com/pngs/637/32/png-transparent-pluto-mickey-mouse-donald-duck-the-walt-disney-company-dog-pattern-hand-painted-cartoon-dog-watercolor-painting-painted-animals-thumbnail.png">Pluto</option>
+                <option value="https://w7.pngwing.com/pngs/267/244/png-transparent-donald-duck-goin-quackers-huey-dewey-and-louie-cartoon-donald-duck.png">Donald</option>	
+           </select>	
+            <br/>	
+            <img src="https://w7.pngwing.com/pngs/717/441/png-transparent-thinking-meow-star-people-cat-pictures-cats-cute-cat.png" style="width: 60%" id="gambar">
+         </body>
+         <script type="text/javascript">	
+         function gantigambar()
+          {		
+              var gambar = document.getElementById("listgambar").value;		
+              document.getElementById("gambar").src = gambar;
+              alert("ini gambar" + gambar);
+              prompt("Masukkan nama anda");
+            }
+        </script>
+</html>

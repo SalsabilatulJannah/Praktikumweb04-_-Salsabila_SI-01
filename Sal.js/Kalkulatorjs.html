@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <body>
+    <title>Calculator</title>
+    <style type="text/css">
+      body{
+    font-family: sans-serif;
+    background-color: burlywood;
+    text-align: center;
+  }
+  .kotak {
+    width: 20px;
+    margin: auto;
+    padding: 10px;
+  }
+ 
+  p{
+    margin-bottom: 20px;
+    color: #ff2600
+  }
+ 
+  input {
+    text-align: center;
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 12px;
+  }
+  </style>
+ </head>
+</body>
+ 
+<form name="form">
+    <table style="width: 100%;">
+    <tr>
+    <p>Kurs Mata Uang Asing</p>
+    <td>
+    <select name="uangasing" onchange="konversiuang()">
+    <option value="pilih">-- Pilih Mata Uang Asing --</option>
+    <option value="USD">USD 13500</option>
+    <option value="SGD">SGD 9900 </option>
+    <option value="Ringgit">Ringgit 10400 </option>
+    <option value="EURO">EURO 15900</option>
+    <option value="YEN">Yen 2000</option>
+    <option value="RIYAL">Riyal 3567</option>
+    </select>
+    </td>
+    </tr>
+    
+    <tr>
+    <td><label for="nilai">Nilai</label></td>
+    <td><input type="number" name="nilai"></td>
+    </tr>
+    
+    <tr>
+    <td><label for="kurs">Hasil Kurs</label></td>
+    <td><input type="text" name="kurs"></td>
+    </tr>
+    
+    <tr>
+    <td><button type="submit" class="btn btn-primary" onClick="konversiuang()">SUBMIT</button></td>
+    <td><button type="reset" class="btn btn-danger">RESET</button></td>
+    </tr>
+    
+    </table>
+    </form> 
+    <script>
+    function konversiuang() {
+        var input = (document.form.nilai.value);
+        var hitunguang = (document.form.uangasing.value);
+        
+        var hasil = 0;
+    
+        if(hitunguang == "USD"){
+            hasil = input*13500;
+        }
+        else if(hitunguang == "SGD"){
+            hasil = input*9900;
+        }
+        else if(hitunguang == "RINGGIT"){
+            hasil = input*10400;
+        }
+        else if(hitunguang == "EURO"){
+            hasil = input*15900;
+        }
+        else if(hitunguang == "YEN"){
+            hasil = input*2000;
+        }
+        else if(hitunguang == "RIYAL"){
+            hasil = input*3567;
+        }
+        else{
+            hasil = 0;
+        }
+    
+        document.form.kurs.value=eval(hasil);   
+    } 
+</script>
+</html> 
